@@ -29,11 +29,11 @@
 				
 				<div id="info">
 					<div id="recipient-info">
-						<?php echo jdn_shipping_company(); ?>
-						<?php echo jdn_shipping_name(); ?>
+						<?php if(jdn_shipping_company()) : ?><?php echo jdn_shipping_company(); ?><br/><?php endif; ?>
+						<?php echo jdn_shipping_name(); ?><br/>
 						<?php echo jdn_shipping_address_1(); ?><br/>
 						<?php if(jdn_shipping_address_2()) : ?><?php echo jdn_shipping_address_2(); ?><br/><?php endif; ?>
-						<?php echo jdn_shipping_city(); ?> <?php echo jdn_shipping_state(); ?> <?php echo jdn_shipping_postcode(); ?>
+						<?php echo jdn_shipping_city(); ?>, <?php echo jdn_shipping_state(); ?>, <?php echo jdn_shipping_postcode(); ?>
 						<?php if(jdn_shipping_country()) : ?><br/><?php echo jdn_shipping_country(); ?><?php endif; ?>
 					</div>
 					
