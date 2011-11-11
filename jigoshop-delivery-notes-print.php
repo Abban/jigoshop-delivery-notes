@@ -123,7 +123,7 @@ if (!function_exists('jdn_shipping_country')) {
 	function jdn_shipping_country() {
 		global $jdn_print;
 		$order = $jdn_print->get_order($_GET['order']);
-		return $order->shipping_country ? jigoshop_countries::$countries[$order->shipping_country] : null;
+		return $order->shipping_country ? __(jigoshop_countries::$countries[$order->shipping_country], 'jigoshop') : null;
 	}
 }
 
