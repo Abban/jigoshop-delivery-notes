@@ -216,16 +216,21 @@ class Jigoshop_Delivery_Notes_Print extends Jigoshop_Delivery_Notes
 	 * Get the current order items
 	 */
 	public function get_order_items($order_id) {
-		$items = $this->get_order($order_id)->items;
+		$order = $this->get_order($order_id);
+		$items = $order->items;
 		$data_list = array();
-
+		
 		foreach ($items as $item) {
+			$product = $order->get_product_from_item($item);
+
 			$data = array();
 			$data['name'] = $item['name'];
 			$data['variation'] = null;
 			$data['quantity'] = $item['qty'];
 			$data['price'] = jigoshop_price($item['cost'] * $item['qty'], array('ex_tax_label' => 1));
 			$data['taxrate'] = $item['taxrate'];
+			$data['sku'] = $product->sku;
+			$data['weight'] = $product->data['weight'];
 
 			if (isset($item['variation_id']) && $item['variation_id'] > 0) {
 				$product = new jigoshop_product_variation( $item['variation_id'] );
