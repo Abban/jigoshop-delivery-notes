@@ -8,6 +8,8 @@
 	Author URI: https://github.com/piffpaffpuff/jigoshop-delivery-notes
 	License: GPL3
 	
+	Copyright 2011 Steve Clark, Trigvvy Gunderson
+		
 	This plugin is distributed under the 
 	GNU General Public License; Version 3 (v3), 
 	and is thus certified open source software. 
