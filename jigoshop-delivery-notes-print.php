@@ -6,7 +6,7 @@ if ( !defined('ABSPATH') ) {
 }
 
 // Check the user capabilities
-if (!current_user_can('manage_options') || !$_GET['order']) {
+if (!current_user_can('edit_others_posts') || !$_GET['order']) {
 	wp_die( __('You do not have sufficient permissions to access this page.') );
 }
 

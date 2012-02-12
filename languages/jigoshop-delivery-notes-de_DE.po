@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-03 16:11+0100\n"
-"PO-Revision-Date: 2011-11-03 16:14+0100\n"
+"PO-Revision-Date: 2012-01-08 21:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: /Users/negro/Projekte/negro/2010 feinkost/programming/current/wp-content/plugins/jigoshop-delivery-notes\n"
 
 #: /Users/negro/Projekte/negro/2010
 #: feinkost/programming/current/wp-content/plugins/jigoshop-delivery-notes/jigoshop-delivery-notes-classes.php:84
