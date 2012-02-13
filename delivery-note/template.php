@@ -60,13 +60,13 @@
 								<th class="price" id="price-label"><?php _e('Price', 'jigoshop'); ?></th>
 							</tr>
 						</thead>
-						<tfoot>
+						<tbody>
 							<?php $items = jdn_get_order_items(); foreach($items as $item) : ?><tr>
-								<td class="description"><?php echo $item['name']; ?><?php if($item['variation']) : ?> <span class="variation"><?php echo $item['variation']; ?><?php endif; ?></span></td>
+								<td class="description"><?php echo $item['name']; ?><?php if($item['variation']) : ?> <span class="variation"><?php echo $item['variation']; ?></span><?php endif; ?></td>
 								<td class="quantity"><?php echo $item['quantity']; ?></td>
 								<td class="price"><?php echo $item['price'] ?></td>
 							<tr><?php endforeach; ?>
-						</tfoot>
+						</tbody>
 					</table>
 				</div>
 				
@@ -104,8 +104,13 @@
 				</div>
 	
 				<div id="notes">
-					<div id="notes-a"><?php echo jdn_shipping_notes(); ?></div>
-					<div id="notes-b"><?php echo jdn_returns_policy(); ?></div>
+					<div id="personal"><?php echo jdn_personal_notes(); ?></div>
+				</div>
+				
+				<div id="letterfoot">
+					<div class="note"><?php echo jdn_refunds(); ?></div>
+					<div class="note"><?php echo jdn_terms_and_conditions(); ?></div>
+					<div class="note last"><?php echo jdn_shipping_notes(); ?></div>
 				</div>
 			</div>
 		</div>

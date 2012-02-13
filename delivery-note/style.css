@@ -72,6 +72,7 @@ th {
 th {
     font-weight: 700;
     color: #000;
+    text-align: left;
 }
 #container {
     width: 900px;
@@ -110,12 +111,15 @@ th {
     border: 1px solid #666;
 }
 #letterhead,
+#letterfoot,
 #info,
 #items,
-#summary {
+#summary,
+#notes {
     margin-bottom: 80px;
 }
 #letterhead,
+#letterfoot,
 #info,
 #summary,
 #notes {
@@ -144,6 +148,7 @@ th {
 }
 #letterhead #company-info {
     float: right;
+    width: 350px;
     text-align: right;
 }
 
@@ -181,19 +186,26 @@ th {
 }
 
 /* notes */
-#notes {
-    border-top: 1px solid #ccc;
-    margin-top: 60px;
-    padding-top: 10px;
-}
-#notes #notes-a,
-#notes #notes-b {
+#notes #personal {
+    float: right;
     width: 350px;
+    text-align: right;
+}
+.note {
+    width: 270px;
     float: left;
     color: #666;
     font-size: .75em;
     line-height: 125%;
+    margin-right: 40px;
 }
-#notes_b {
-    float: right;
+.note.last {
+	margin-right: 0px;
+}
+
+/* letterfoot */
+#letterfoot {
+    border-top: 1px solid #ccc;
+    margin-top: 60px;
+    padding-top: 10px;
 }

@@ -139,11 +139,29 @@ class Jigoshop_Delivery_Notes_Admin extends Jigoshop_Delivery_Notes
 					</tr>
 					<tr>
 						<th>
-							<label for="<?php echo $this->prefix; ?>returns"><?php _e('Returns Policy:', 'jigoshop-delivery-notes'); ?></label>
+							<label for="<?php echo $this->prefix; ?>refunds"><?php _e('Refunds:', 'jigoshop-delivery-notes'); ?></label>
 						</th>
 						<td>
-							<textarea name="<?php echo $this->prefix; ?>returns" rows="6" class="large-text"><?php echo get_option($this->prefix . 'returns'); ?></textarea>
-							<span class="description"><?php _e('The returns policy in case the client would like to send back some goods.', 'jigoshop-delivery-notes'); ?></span>
+							<textarea name="<?php echo $this->prefix; ?>refunds" rows="6" class="large-text"><?php echo get_option($this->prefix . 'refunds'); ?></textarea>
+							<span class="description"><?php _e('The refunds policy in case the customer would like to send back some goods.', 'jigoshop-delivery-notes'); ?></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<label for="<?php echo $this->prefix; ?>terms"><?php _e('Terms & Conditions:', 'jigoshop-delivery-notes'); ?></label>
+						</th>
+						<td>
+							<textarea name="<?php echo $this->prefix; ?>terms" rows="6" class="large-text"><?php echo get_option($this->prefix . 'terms'); ?></textarea>
+							<span class="description"><?php _e('The terms & conditions to inform the customer about the agreements of a purchase.', 'jigoshop-delivery-notes'); ?></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<label for="<?php echo $this->prefix; ?>personal"><?php _e('Personal Note:', 'jigoshop-delivery-notes'); ?></label>
+						</th>
+						<td>
+							<textarea name="<?php echo $this->prefix; ?>personal" rows="6" class="large-text"><?php echo get_option($this->prefix . 'personal'); ?></textarea>
+							<span class="description"><?php _e('The personal notes to thank the customer and sign with your name.".', 'jigoshop-delivery-notes'); ?></span>
 						</td>
 					</tr>
 				</tbody>

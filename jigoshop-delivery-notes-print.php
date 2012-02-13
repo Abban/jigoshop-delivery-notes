@@ -153,7 +153,7 @@ if (!function_exists('jdn_order_date')) {
 	function jdn_order_date() {
 		global $jdn_print;
 		$order = $jdn_print->get_order($_GET['order']);
-		return date(get_option('date_format'), strtotime($order->order_date));
+		return date_i18n(get_option('date_format'), strtotime($order->order_date));
 	}
 }
 
@@ -258,12 +258,32 @@ if (!function_exists('jdn_has_discount')) {
 }
 
 /**
- * Return policy for returns
+ * Terms and conditions
  */
-if (!function_exists('jdn_returns_policy')) {
-	function jdn_returns_policy() {
+if (!function_exists('jdn_terms_and_conditions')) {
+	function jdn_terms_and_conditions() {
 		global $jdn_print;
-		return wpautop(wptexturize($jdn_print->get_setting('returns')));
+		return wpautop(wptexturize($jdn_print->get_setting('terms')));
+	}
+}
+
+/**
+ * Refund policy
+ */
+if (!function_exists('jdn_refunds')) {
+	function jdn_refunds() {
+		global $jdn_print;
+		return wpautop(wptexturize($jdn_print->get_setting('refunds')));
+	}
+}
+
+/**
+ * Personal notes to thank the customer
+ */
+if (!function_exists('jdn_personal_notes')) {
+	function jdn_personal_notes() {
+		global $jdn_print;
+		return wpautop(wptexturize($jdn_print->get_setting('personal')));
 	}
 }
 
